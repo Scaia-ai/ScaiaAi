@@ -8,6 +8,7 @@
 
 # In[1]:
 
+import os
 
 from get_enron import download_enron_data
 
