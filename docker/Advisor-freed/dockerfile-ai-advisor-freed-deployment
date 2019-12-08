@@ -1,0 +1,24 @@
+
+FROM continuumio/miniconda3:4.7.12
+Run conda create -n scaia python=3.7
+# Clone git for future realses
+#RUN git clone https://github.com/
+SHELL ["/bin/bash", "-c"]
+COPY . .
+RUN  conda install  gensim
+RUN conda install pytorch torchvision -c pytorch
+RUN conda install flask=1.0.2
+RUN pip install gevent==1.4.0
+RUN  apt install awscli
+RUN conda install scikit-learn=0.21.2
+RUN conda install pytorch=1.0 torchvision cudatoolkit=9.0 -c pytorch
+RUN pip install pytorch-pretrained-bert==0.6.2
+WORKDIR smoking-gun
+RUN chmod +x /run_freed.sh
+Run  /run_freed.sh
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+
+FROM continuumio/miniconda3:4.7.12
+Run conda create -n scaia python=3.7
+# Clone git for future realses
+#RUN git clone https://github.com/
+SHELL ["/bin/bash", "-c"]
+RUN  conda install  gensim
+RUN conda install pytorch torchvision -c pytorch
+RUN cd ../..
+COPY . .
+WORKDIR doc2vec
+RUN chmod +x /run.sh
+Run  /run.sh
+
+

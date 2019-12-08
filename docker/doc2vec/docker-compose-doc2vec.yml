@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  doc2vec:
+    build:
+      context: .
+      dockerfile: dockerfile-doc2vec-developement
+    image: doc2vec
+    container_name: doc2vec
+
+    command: doc2vec start

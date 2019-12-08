@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  doc2vec:
+    build:
+      context: .
+      dockerfile: dockerfile-ai-advisor-enron-developement
+    image: ai-advisor-enron
+    container_name: ai-advisor-enron
+
+    command: ai-advisor-enron start
