@@ -1,0 +1,5 @@
+Guys,
+
+Google Colab https://colab.research.google.com/ emphasizes that 'no setup needed!' So let us try to use their environment as the standard first environment, and only go to AWS as a last resort.
+
+It's more for the ease of use than for saving money. And you can use GPU and even TPU.

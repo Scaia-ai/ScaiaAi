@@ -1,0 +1,7 @@
+Due to U.S. trade controls law restrictions, your GitHub account has been restricted.
+
+This means we have suspended access to private repository services and paid services for your account. For free individual accounts, you still have access to free GitHub public repository services (such as public repositories for open source projects and associated GitHub Pages and Gists).
+
+If you believe your account has been flagged in error, and you are not located in or resident in a sanctioned region, please file an appeal at https://airtable.com/shrGBcceazKIoz6pY.
+
+Please read about GitHub and Trade Controls at https://help.github.com/articles/github-and-trade-controls for more information.

@@ -1,0 +1,7 @@
+Guys,
+
+I stopped all unneeded instances. You can bring them back up if you need them.
+
+Let's run locally normally, use shared instances for shared development, and any kind of power we need, for ML training.
+
+Thank you
