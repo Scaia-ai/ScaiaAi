@@ -1,24 +1,4 @@
 second email
-David:
-Do you have a simulation set up that will allow me to simulate trades by
-pushing a buy or sell button and will move the two way so i can try
-simulating actual market cicumstances?
-
-
-From: David Forster/ENRON@enronXgate on 05/08/2001 09:55 AM
-To: John Arnold/HOU/ECT@ECT
-cc: Savita Puthigai/ENRON@enronXgate
-Subject:
-
-
-John,
-
-You might recall we spoke a few weeks ago about a system with more
-intelligence for out-of-hours trading than just leaving the products on Last
-Trade is Mid.
-
-Attached is a suggestion for how such a system might work. It builds on
-Offset to Last Trade functionality.
-
-The simplified description is: It tracks two variables: Intensity(Speed) and
-Bias (Buy or Sell emphasis).  As Intensity increases, the Spread increases.
+have created a middle man to handle user authentication
+so there is no need to do that on your part
+The opportunity for artificial intelligence in legal is ripe, one researcher writes, especially in the area of client service from intake to business development and delivery of services.
