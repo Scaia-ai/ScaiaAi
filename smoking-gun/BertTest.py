@@ -30,7 +30,7 @@ clone_test_data(download_to_folder = os.path.join("input_data", "emails"))
 # In[ ]:
 
 
-import os
+import process_data
 from process_data import process_emails
 
 
