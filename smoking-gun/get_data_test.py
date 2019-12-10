@@ -30,7 +30,7 @@ def clone_test_data(download_to_folder = os.path.join("input_data", "emails")):
     return
 if __name__ == "__main__":
 
-    download_test_data(download_to_folder = os.path.join("input_data", "emails"))
+    clone_test_data(download_to_folder = os.path.join("input_data", "emails"))
 
 
 
