@@ -62,7 +62,7 @@ get_doc_representations(input_email_text_file=os.path.join("input_data", "enron_
 # In[ ]:
 
 
-import os
+
 from nn_similarity import train_nn, test_nn
 
 
