@@ -88,7 +88,6 @@ test_nn(embeddings_file_path = os.path.join("input_data", "enron_embeddings.csv"
 # In[ ]:
 
 
-import os
 from nn_similarity import train_nn, test_nn
 
 
