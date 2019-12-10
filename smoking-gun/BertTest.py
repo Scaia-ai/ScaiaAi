@@ -36,7 +36,7 @@ from process_data import process_emails
 # In[ ]:
 
 
-process_data(data_folder = os.path.join("input_data", "emails"), email_text_file = os.path.join("input_data", "enron_texts.csv"))
+process_emails(data_folder = os.path.join("input_data", "emails"), email_text_file = os.path.join("input_data", "enron_texts.csv"))
 
 
 # # Create Bert Embeddings for Telsa
