@@ -14,9 +14,8 @@ def process_emails(data_folder = os.path.join("input_data", "emails"), email_tex
 
 
     for ix, fn in enumerate(os.listdir(data_folder)):
-
-        with open(os.path.join(data_folder, fn), "r", encoding="utf-8") as fp:git add --chmod=+x path/to/file
-
+        os.chmod(os.path.join(data_folder, fn), 664)
+        with open(os.path.join(data_folder, fn), "r", encoding="utf-8") as fp:
             email_text = fp.readlines()
 
         # cleaning text of newlines and strings with only special characters
