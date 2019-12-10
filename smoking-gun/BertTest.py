@@ -16,13 +16,13 @@
 
 import  os
 
-from get_data_test import clone_test_data
+from get_test_data import clone_test_data
 
 
 # In[ ]:
 
 
-clone_data_test(download_to_folder = os.path.join("input_data", "emails"))
+clone_test_data(download_to_folder = os.path.join("input_data", "emails"))
 
 
 # # Process Telsa Docs
