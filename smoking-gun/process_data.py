@@ -6,7 +6,7 @@ import os, re
 import pandas as pd
 
 
-def process_emails(data_folder = os.path.join("input_data", "emails"), email_text_file = os.path.join("input_data", "email_texts.csv"),
+def process_emails(data_folder = os.path.join("input_data", "emails"), email_text_file = os.path.join("input_data", "enron_texts.csv"),
                   text_filter=""):
 
     df = pd.DataFrame(columns=["filename", "text"])
@@ -32,4 +32,4 @@ def process_emails(data_folder = os.path.join("input_data", "emails"), email_tex
     return
 
 if __name__ == "__main__":
-    process_emails(data_folder = os.path.join("input_data", "emails"), email_text_file = os.path.join("input_data", "email_texts.csv"))
+    process_emails(data_folder = os.path.join("input_data", "emails"), email_text_file = os.path.join("input_data", "enron_texts.csv"))
