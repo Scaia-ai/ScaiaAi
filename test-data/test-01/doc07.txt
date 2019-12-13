@@ -1,3 +1,0 @@
-There are many answers to this question, but we’ll focus on one of the possible ways – using Amazon’s S3.
-AWS S3 is a Simple Storage Service. It lets you store your files in the cloud. Instead of /home/user/data/file.csv,
- you save your file under s3://bucket/data/file.csv. Python provides tools that make it easy to switch from local storage to S3.
