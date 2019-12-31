@@ -75,7 +75,7 @@ This program takes the enron emails as processed input from FreeEed. It then run
 
 ## Data Storage
 
-I have repopulated the input_data folder with the needed files and directories. The output_data folder now has all of the embeddings, processed text files, csvs and models.
+I have populated the input_data folder with the processed inputs for the enron emails but you will have to follow the instructions to download the raw enron emails. The output_data folder now has all of the embeddings, processed text files, csvs and models.
 
 ## Table of Contents for python notebooks
 
