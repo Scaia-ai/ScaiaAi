@@ -33,8 +33,8 @@ You should first make sure that you have hte dataset cloned and ready:
 
 ```bash
 cd $SCAIA_HOME
-git clone git@github.com:ScaiaAI/datasets.git
-cd datasets/GLUE/
+git clone git@github.com:ScaiaAi/datasets.git
+cd datasets/glue/
 ./download_glue_data.sh
 ```
 
