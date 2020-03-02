@@ -1,0 +1,8 @@
+numpy
+tensorflow
+torch
+torchvision
+transformers
+Flask
+flask_restful
+pymongo
