@@ -26,7 +26,7 @@ import copy
 import csv
 
 
-#from file_utils import is_tf_available, is_torch_available
+from transformers import is_tf_available, is_torch_available
 
 import numpy as np
 import torch
