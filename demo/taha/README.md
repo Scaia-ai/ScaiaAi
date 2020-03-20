@@ -5,7 +5,7 @@
 You need to create a conda environment called `huggingface`
 
 ```bash
-conda create -n huggingface tensorflow pytorch torchvision cudatoolkit=10.1 -c pytorch
+conda create -n huggingface python=3.7 pytorch torchvision cudatoolkit=10.1 -c pytorch
 conda activate huggingface
 git clone git@github.com:huggingface/transformers.git
 cd transformers
