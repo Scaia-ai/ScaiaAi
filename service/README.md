@@ -4,14 +4,9 @@
 Currently the service writes data out to local pickle files.  This won't be very robust so we will likely switch to using sqllite.
 
 
+![](../images/poc-ai.png)
 
-## Packages
 
-You must install `flask_restful` 
-
-```bash
-pip install flask_restful
-```
 
 
 ## Running
@@ -52,76 +47,16 @@ And you should get the response something like this:
 
 
 ## Using Examples
+# Cases
 
-```console
-
-
-# Users
-
-$ curl http://localhost:5000/users/user1 -d "user=myuser" -X put   # Add a New User
-{
-    "user": "myuser"
-}
-
-$ curl http://localhost:5000/users/user1 # retrive a user by user_id
-{
-    "user1": {
-        "user": "myuser"
-    }
-}
-
-$ curl http://localhost:5000/users # get all users 
-{
-    "user1": {
-        "user": "myuser"
-    }
-}
-
-# Projects
+curl -X POST -H "Content-Type: application/json" -d '{
+  "case_id": "1",
+  "uri": "https://elephantscale-public.s3.amazonaws.com/data/text/books.zip "
+}' http://localhost:5000/cases
 
 
-$ curl http://localhost:5000/projects/project1 -d "project=myproject" -d "user=user1" -X put   # Add a New Project
-{
-    "project": "myproject"
-}
-
-$ curl http://localhost:5000/projects/project1 # retrive a project by project_id 
-{
-    "project1": {
-        "project": "myproject"
-    }
-}
-
-$ curl http://localhost:5000/projects # get all projects
-{
-    "project1": {
-        "project": "myproject"
-    }
-}
-
-# URIs
-
-$ curl http://localhost:5000/fileuris/fileuri1 -d "fileuri=uri-name1" -d "project=project1"  -X put   # Add a New File URI
-{
-    "": "myproject"
-}
-
-$ curl http://localhost:5000/fileuris/ # retrieve a URI by the uri-id
-{
-    "project1": {
-        "project": "myproject"
-    }
-}
-
-$ curl http://localhost:5000/fileuris # get all uris
-{
-    "project1": {
-        "project": "myproject"
-    }
-}
+curl --request GET curl http://localhost:5000/cases/case1 
 
 
-
-```
 
 

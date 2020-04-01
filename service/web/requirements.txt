@@ -6,3 +6,4 @@ transformers
 Flask
 flask_restful
 pymongo
+wget
