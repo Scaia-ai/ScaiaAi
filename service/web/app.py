@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 from os import path,mkdir,chdir,path
 import pickle
 import wget
@@ -19,6 +19,7 @@ Welcome to the DocSimilarity Service!
 To start, you can try CURLing:
 
 curl http://localhost:5000/cases # get all cases
+curl http://localhost:5000/case/1 # get all cases
 
 curl -X POST -H "Content-Type: application/json" -d '{
   "case_id": "1",
@@ -29,7 +30,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 """
 
-cases=[]
+cases={}
 case_files={}
 
 def pickle_files():
@@ -46,6 +47,7 @@ def unpickle_files():
 
 
 unpickle_files()
+print("Current state of cases: " + str(cases))
 
 
 def get_files():
@@ -68,15 +70,28 @@ def download_uri(case_id, uri):
           zip_ref.extractall('.')
     t_files = get_files()
     case_files[case_id] = t_files
-    
+    cases[case_id]['files'] = t_files 
     chdir("..")
     print(case_files)
+    pickle_files()
 
 
 @app.route("/")
 def hello_world():
   return "Hello, World!"
 
+
+@app.route('/case/<int:case_id>', methods=['GET'])
+def get_case(case_id):
+    case_id_str = str(case_id)
+    print("getting case_id: " + case_id_str)
+    case = cases[case_id_str] if case_id_str in cases else None 
+
+    if not case:
+        case = case[str(case_id)] if case_id in cases else None
+        if not case: 
+            abort(404)
+    return jsonify({'case': case})
 
 
 @app.route('/cases')
@@ -89,7 +104,7 @@ def add_case():
   this_case = request.get_json()
   print(this_case)
   if this_case:  # not null
-     cases.append(request.get_json())
+     cases[this_case['case_id']] = this_case
      pickle_files()
      download_uri(this_case['case_id'], this_case['uri'])
   return '', 204
