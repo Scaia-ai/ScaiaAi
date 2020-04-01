@@ -16,6 +16,7 @@ To run the service, run the bash shell script:
 ```bash
 cd service
 bash ./run_service.sh
+```
 
 You will get a response something like this:
 
@@ -46,8 +47,44 @@ And you should get the response something like this:
 ```
 
 
+### API:
+
+Cases:
+
+* Do a POST to create a case
+
+```console
+curl -X POST -H "Content-Type: application/json" -d '{
+  "case_id": "1",
+  "uri": "https://elephantscale-public.s3.amazonaws.com/data/text/books.zip "
+}' http://localhost:5000/cases
+
+```
+
+This will also trigger a download of all the files, unzip, etc.
+
+* Do a GET to retrieve a case or cases
+
+Get all cases: `curl http://localhost:5000/cases`   
+
+Get one case by specifying the `case_id` : `curl http://loocalhost:5000/case/1`
+
+* Do a GET to retrieve documents within a case
+
+Get documents (pass `case_id`, `doc_id`): `curl http://localhost:5000/cases/1/docs/1`
+
+* Do a GET to retrieve similar documetns:
+
+Get documents (pass `case_id`, `doc_id`): `curl http://localhost:5000/cases/1/similar/1`
+
+
+
 ## Using Examples
-# Cases
+
+
+### Adding a case (POST)
+
+```console 
 
 curl -X POST -H "Content-Type: application/json" -d '{
   "case_id": "1",
@@ -55,8 +92,25 @@ curl -X POST -H "Content-Type: application/json" -d '{
 }' http://localhost:5000/cases
 
 
-curl --request GET curl http://localhost:5000/cases/case1 
+```
+
+
+### Getting a case (GET)
+
+```console 
+
+curl --request GET curl http://localhost:5000/cases/1 
+
+```
 
 
 
+### Generating Similar Documents (GET)
 
+Here we pass the case ID, and the document ID
+
+```console
+
+curl --request GET curl http://localhost:5000/cases/1/similar/1
+
+```
