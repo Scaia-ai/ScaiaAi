@@ -50,6 +50,16 @@ unpickle_files()
 print("Current state of cases: " + str(cases))
 
 
+def retrieve_case(case_id):
+    case_id_str = str(case_id)
+    print("getting case_id: " + case_id_str)
+    case = cases[case_id_str] if case_id_str in cases else None 
+
+    if not case:
+        case = case[str(case_id)] if case_id in cases else None
+    return case
+
+
 def get_files():
     files=[]
     for r,d,f in os.walk('.'):
@@ -93,6 +103,21 @@ def get_case(case_id):
             abort(404)
     return jsonify({'case': case})
 
+@app.route('/case/<int:case_id>/docs', methods=['GET'])
+def get_documents(case_id):
+    case = retrieve_case(case_id)
+    docs = case['files']
+
+    return jsonify(docs)
+
+
+@app.route('/case/<int:case_id>/similar/<int:doc_id>', methods=['GET'])
+def get_sim_documents(case_id, doc_id):
+    case = retrieve_case(case_id)
+    docs = case['files']
+
+    if docs:
+        return jsonify(docs)
 
 @app.route('/cases')
 def get_cases():
