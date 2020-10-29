@@ -3,7 +3,8 @@ import sys
 from transformers import PegasusForConditionalGeneration, PegasusTokenizer
 import torch
 
-df = pd.read_csv('../test-data/collected_02/metadata_0.csv', sep='|')
+#df = pd.read_csv('../test-data/collected_02/metadata_0.csv', sep='|')
+df = pd.read_csv('/home/mark/projects/scaia/scaia-test-data/collected_02/metadata_0_first_lines.csv', sep='|')
 
 
 
@@ -26,4 +27,4 @@ def summarize(src_text):
 
 df['summary'] = df['text'].apply(summarize)
 
-df[['text', 'summary']].to_csv('output.csv')
+df[['text', 'summary']].to_csv('output.csv', sep='|')

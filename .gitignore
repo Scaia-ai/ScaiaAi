@@ -3,3 +3,4 @@ model.bin
 *.DS_Store
 .idea/
 .DS_Store
+output.csv
