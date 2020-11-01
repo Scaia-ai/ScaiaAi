@@ -1,12 +1,14 @@
+import os
+
 import pandas as pd
-import sys
 from transformers import PegasusForConditionalGeneration, PegasusTokenizer
 import torch
 
+if (os.path.exists("output") == False):
+    os.mkdir("output")
+
 #df = pd.read_csv('../test-data/collected_02/metadata_0.csv', sep='|')
 df = pd.read_csv('/home/mark/projects/scaia/scaia-test-data/collected_02/metadata_0_first_lines.csv', sep='|')
-
-
 
 model_name = 'google/pegasus-xsum'
 torch_device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -27,4 +29,4 @@ def summarize(src_text):
 
 df['summary'] = df['text'].apply(summarize)
 
-df[['text', 'summary']].to_csv('output.csv', sep='|')
+df[['summary', 'text']].to_csv('output/summary.csv', sep='|')
