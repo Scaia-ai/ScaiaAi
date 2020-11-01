@@ -34,7 +34,7 @@ if (os.path.exists("output") == False):
 
 
 def tfidf(src_text, num_terms):
-    tf = TfidfVectorizer(analyzer='word', ngram_range=(1,1), min_df = 5, stop_words='english', token_pattern=r'(?u)\b\w*[a-zA-Z]\w*\b')
+    tf = TfidfVectorizer(analyzer='word', ngram_range=(2,3), min_df = 5, stop_words='english', token_pattern=r'(?u)\b\w*[a-zA-Z]\w*\b')
     tfidf_matrix =  tf.fit_transform(src_text)
     feature_names = np.array(tf.get_feature_names())
     tfidf_sorting = src_text.apply(lambda x: feature_names[np.argsort(tf.transform([x]).toarray()).flatten()[::-1]][:num_terms])
