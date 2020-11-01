@@ -9,7 +9,8 @@ import pandas as pd
 from collections import Counter
 
 #df = pd.read_csv('../test-data/collected_02/metadata_0.csv', sep='|')
-file_path = '/home/tfox/scaia/scaia-test-data/jeff/metadata_0.csv'
+# file_path = '/home/tfox/scaia/scaia-test-data/jeff/metadata_0.csv'
+file_path = '/home/mark/projects/scaia/scaia-test-data/jeff/metadata_0.csv'
 file_name = os.path.basename(file_path)
 
 df = pd.read_csv(file_path, sep='|')
