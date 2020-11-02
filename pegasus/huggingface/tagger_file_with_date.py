@@ -1,7 +1,6 @@
 import os
 import datetime
-
-
+import sys
 
 import pandas as pd
 
@@ -11,6 +10,8 @@ try:
     print(aDate)
 except (Exception):
     print(Exception)
+
+sys.exit()
 
 nagios_prefix = 'nagios-'
 crystal_prefix = 'Crystal-'
