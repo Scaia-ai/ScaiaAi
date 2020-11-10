@@ -15,7 +15,7 @@ sys.exit()
 
 nagios_prefix = 'nagios-'
 crystal_prefix = 'Crystal-'
-decrystal_prefix = 'Decryst-'
+decrystal_prefix = 'Decrys
 
 file_path = '/home/mark/projects/scaia/scaia-test-data/jeff/metadata_0.csv'
 file_name = os.path.basename(file_path)

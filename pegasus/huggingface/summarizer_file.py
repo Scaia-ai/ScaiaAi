@@ -26,7 +26,6 @@ def summarize(src_text):
 
 #print(summarize([df.loc[0, 'text']]))
 
-
 df['summary'] = df['text'].apply(summarize)
 
 df[['summary', 'text']].to_csv('output/summary.csv', sep='|')
