@@ -4,3 +4,5 @@ model.bin
 .idea/
 .DS_Store
 output/
+log.txt
+__pycache__

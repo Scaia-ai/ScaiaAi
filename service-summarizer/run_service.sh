@@ -1,2 +1,3 @@
 #!/bin/bash
-nohup python app.py > log.txt 2>&1 &
+conda activate scaia
+nohup bash run_app.py > log.txt 2>&1 &
