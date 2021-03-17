@@ -1,8 +1,8 @@
 # Summarizer Service
 
-Running on 3.36.75.196
+Running on 3.16.75.196
 
 ```bash
-curl -X POST -H "content-type: application/json" -d '{"text": "This is the document to summarize"}'
+curl -X POST -H "content-type: application/json" -d '{"text": "This is the document to summarize"}' http://3.16.75.196:5000/summarizeText
 ```
 
