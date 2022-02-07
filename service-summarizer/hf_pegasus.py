@@ -4,7 +4,7 @@ import torch
 
 def summarize(src_text):
    model_name = 'google/pegasus-xsum'
-   torch_device = 'cuda' if torch.cuda.is_available() else 'cpu'
+   device = 'cuda' if torch.cuda.is_available() else 'cpu'
    tokenizer = PegasusTokenizer.from_pretrained(model_name)
    model = PegasusForConditionalGeneration.from_pretrained(model_name).to(device)
    batch = tokenizer(src_text, truncation=True, padding="longest", return_tensors="pt").to(device)
