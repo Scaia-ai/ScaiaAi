@@ -30,7 +30,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 def hello_world():
   return welcome_message
 
-@app.route('/summarizeText', methods=['POST'])
+@app.route('/summarizeTextTest', methods=['POST'])
 def summarize_text():
   if not request.json or not 'text' in request.json:
       abort(400)
@@ -43,7 +43,7 @@ def summarize_text():
      return jsonify(doc)
   return '', 204
 
-@app.route('/summarizeTextPG', methods=['POST'])
+@app.route('/summarizeText', methods=['POST'])
 def summarize_text_pg():
   if not request.json or not 'text' in request.json:
       abort(400)
