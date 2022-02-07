@@ -18,10 +18,9 @@ pip install sentencepiece wget
 ## Runtime
 
 
-Running on 3.128.87.129
-
+Running on  3.135.9.103
 
 ```bash
-curl -X POST -H "content-type: application/json" -d '{"text": "This is the document to summarize"}' http://3.128.87.129:5000/summarizeText
+curl -X POST -H "content-type: application/json" -d '{"text": "This is the document to summarize"}' http://3.135.9.103:5000/summarizeText
 ```
 
