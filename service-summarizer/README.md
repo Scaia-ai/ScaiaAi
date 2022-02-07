@@ -19,10 +19,10 @@ pip install sentencepiece
 ## Runtime
 
 
-Running on 3.16.75.196
+Running on 3.128.87.129
 
 
 ```bash
-curl -X POST -H "content-type: application/json" -d '{"text": "This is the document to summarize"}' http://3.16.75.196:5000/summarizeText
+curl -X POST -H "content-type: application/json" -d '{"text": "This is the document to summarize"}' http://3.128.87.129:5000/summarizeText
 ```
 

@@ -5,7 +5,7 @@ import wget
 import os
 import zipfile
 
-import hg_pegasus
+import hf_pegasus
 
 
 app = Flask(__name__)
@@ -44,7 +44,7 @@ def summarize_text():
   return '', 204
 
 @app.route('/summarizeTextPG', methods=['POST'])
-def summarize_text():
+def summarize_text_pg():
   if not request.json or not 'text' in request.json:
       abort(400)
   this_document = request.get_json()
