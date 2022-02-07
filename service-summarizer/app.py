@@ -50,6 +50,7 @@ def summarize_text_pg():
   this_document = request.get_json()
   if this_document:  # not null
      text_to_summarize = this_document['text'] 
+     print(text_to_summarize)
      sumarized_text = hf_pegasus.summarize(text_to_summarize)
      doc = {
        'summary': summarized_text
