@@ -6,11 +6,10 @@
 Create a conda enviornment for scaia
 
 ```bash
-conda create --name scaia python=3.8
+conda create --name scaia python=3.8 flask
 conda activate scaia
-conda -c anaconda flask
 pip install transformers[torch]
-pip install sentencepiece
+pip install sentencepiece wget
 
 ```
 
