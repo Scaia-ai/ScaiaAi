@@ -51,10 +51,13 @@ def summarize_text_pg():
   if this_document:  # not null
      text_to_summarize = this_document['text'] 
      print(text_to_summarize)
-     sumarized_text = hf_pegasus.summarize(text_to_summarize)
+     summarized_text = hf_pegasus.summarize(text_to_summarize)
      doc = {
        'summary': summarized_text
      }
+     return jsonify(doc)
+  return '', 204
+
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)

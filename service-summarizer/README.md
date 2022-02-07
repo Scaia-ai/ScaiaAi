@@ -21,6 +21,6 @@ pip install sentencepiece wget
 Running on  3.135.9.103
 
 ```bash
-curl -X POST -H "content-type: application/json" -d '{"text": "This is the document to summarize"}' http://18.218.29.151:5000/summarizeText
+curl -X POST -H "content-type: application/json" -d '{"text": "A central question, “Where is Peng Shuai?”, has represented concern for the star but also points to related questions about the future of tennis in China. "}' http://18.218.29.151:5000/summarizeText
 ```
 
