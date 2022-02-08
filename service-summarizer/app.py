@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 
 
+
 welcome_message = """
 Welcome to the Summarizer Service!
 
@@ -52,6 +53,21 @@ def summarize_text_pg():
      text_to_summarize = this_document['text'] 
      print(text_to_summarize)
      summarized_text = hf_pegasus.summarize(text_to_summarize)
+     doc = {
+       'summary': summarized_text
+     }
+     return jsonify(doc)
+  return '', 204
+
+@app.route('/summarizeTextLegal', methods=['POST'])
+def summarize_text_legal():
+  if not request.json or not 'text' in request.json:
+      abort(400)
+  this_document = request.get_json()
+  if this_document:  # not null
+     text_to_summarize = this_document['text'] 
+     print(text_to_summarize)
+     summarized_text = hf_pegasus.summarize_legal(text_to_summarize)
      doc = {
        'summary': summarized_text
      }
