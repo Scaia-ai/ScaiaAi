@@ -29,6 +29,7 @@ bash Anaconda3-2021.11-Linux-x86_64.sh
     conda install gensim -y
     pip install transformers[torch]
     pip install sentencepiece wget
+    pip install fastapi "uvicorn[standard]"
 
 # Open Jupyter Notebook on an AWS server
 

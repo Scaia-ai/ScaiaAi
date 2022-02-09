@@ -10,6 +10,7 @@ conda create --name scaia python=3.8 flask
 conda activate scaia
 pip install transformers[torch]
 pip install sentencepiece wget
+pip install fastapi "uvicorn[standard]"
 
 ```
 
