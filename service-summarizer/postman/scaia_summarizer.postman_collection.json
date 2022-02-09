@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "db8f4d0e-7bb4-4a49-98b4-dc3fc596bbf2",
+		"name": "scaia_summarizer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "summarizeText",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "summarizeTextLegal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
