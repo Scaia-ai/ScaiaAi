@@ -54,3 +54,10 @@ curl -X POST -H "content-type: application/json" -d '{"text": "A central questio
 curl -X POST -H "content-type: application/json" -d '{"text": "On March 5, 2021, the Securities and Exchange Commission charged AT&T, Inc. with repeatedly violating Regulation FD, and three of its Investor Relations executives with aiding and abetting AT&Ts violations, by selectively disclosing material nonpublic information to research analysts. "}' http://18.218.29.151:5000/summarizeTextLegal
 
 ```
+
+
+## Running on FastAPI
+
+```bash
+uvicorn main:app --reload --host 0.0.0.0
+```
