@@ -1,0 +1,5 @@
+uvicorn[standard]
+transformers[torch]
+sentencepiece==0.1.96
+wget==3.2
+fastapi==0.73.0

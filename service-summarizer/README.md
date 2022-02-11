@@ -19,7 +19,7 @@ pip install fastapi "uvicorn[standard]"
 ## Runtime
 
 
-Running on  3.135.9.103
+Running on 52.14.40.92
 
 
 ### How to run
@@ -44,14 +44,14 @@ source run_service.sh
 
 # XMap
 
-curl -X POST -H "content-type: application/json" -d '{"text": "A central question, “Where is Peng Shuai?”, has represented concern for the star but also points to related questions about the future of tennis in China. "}' http://18.218.29.151:5000/summarizeText
+curl -X POST -H "content-type: application/json" -d '{"text": "A central question, “Where is Peng Shuai?”, has represented concern for the star but also points to related questions about the future of tennis in China. "}' http://52.14.40.92:8000/summarizeText/
 ```
 
 ```bash
 
 # Legal
 
-curl -X POST -H "content-type: application/json" -d '{"text": "On March 5, 2021, the Securities and Exchange Commission charged AT&T, Inc. with repeatedly violating Regulation FD, and three of its Investor Relations executives with aiding and abetting AT&Ts violations, by selectively disclosing material nonpublic information to research analysts. "}' http://18.218.29.151:5000/summarizeTextLegal
+curl -X POST -H "content-type: application/json" -d '{"text": "On March 5, 2021, the Securities and Exchange Commission charged AT&T, Inc. with repeatedly violating Regulation FD, and three of its Investor Relations executives with aiding and abetting AT&Ts violations, by selectively disclosing material nonpublic information to research analysts. "}' http://52.14.40.92:8000/summarizeTextLegal/
 
 ```
 
@@ -60,4 +60,27 @@ curl -X POST -H "content-type: application/json" -d '{"text": "On March 5, 2021,
 
 ```bash
 uvicorn main:app --reload --host 0.0.0.0
+```
+
+Yu can see the docs like this:
+
+http://52.14.40.92:8000/docs#
+
+
+## Docker
+
+We now have a dockerized version of hte applicaiton that runs on port 80.  This may be the fugture of the application
+
+Here is how we run it:
+
+First we should see if the container is already there or running:
+
+```bash
+docker ps -a
+docker rm <container hash>
+```
+
+```bash
+docker build -t "summarizer" .
+docker run -d --name summarizer-container -p 80:80 summarizer
 ```
