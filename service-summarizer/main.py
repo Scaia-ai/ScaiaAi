@@ -4,6 +4,23 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
 
+
+
+
+welcome_message = """
+Welcome to the Summarizer Service!
+
+To start, you can try CURLing:
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "text": "This is the document to summarize"
+}' http://localhost:5000/summarizeText/
+
+
+
+"""
+
+
 import hf_pegasus
 
 app = FastAPI()
@@ -16,7 +33,7 @@ class Text(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": welcome_message}
 
 
 @app.post("/summarizeTextTest/")
