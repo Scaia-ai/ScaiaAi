@@ -21,7 +21,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 """
 
 
-import hf_pegasus
+import app.hf_pegasus as hf_pegasus
 
 app = FastAPI()
 
