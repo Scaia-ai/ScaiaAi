@@ -55,6 +55,14 @@ curl -X POST -H "content-type: application/json" -d '{"text": "On March 5, 2021,
 
 ```
 
+```bash
+
+# Pegasus 
+
+curl -X POST -H "content-type: application/json" -d '{"text": "On March 5, 2021, the Securities and Exchange Commission charged AT&T, Inc. with repeatedly violating Regulation FD, and three of its Investor Relations executives with aiding and abetting AT&Ts violations, by selectively disclosing material nonpublic information to research analysts. ", "model" : "google/pegasus-xmap"}' http://52.14.40.92:8000/summarizeTextLegal/
+
+```
+
 
 ## Running on FastAPI
 
@@ -77,6 +85,7 @@ First we should see if the container is already there or running:
 
 ```bash
 docker ps -a
+docker stop <container hash>
 docker rm <container hash>
 ```
 
@@ -84,3 +93,4 @@ docker rm <container hash>
 docker build -t "summarizer" .
 docker run -d --name summarizer-container -p 80:80 summarizer
 ```
+
