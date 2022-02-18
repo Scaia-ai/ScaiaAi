@@ -15,6 +15,7 @@ def summarize(src_text):
    return(tgt_text)
 
 def summarize_model(src_text, model_name):
+   print("summarize_model %s %s" % (src_text, model_name))
    device = 'cuda' if torch.cuda.is_available() else 'cpu'
    tokenizer = PegasusTokenizer.from_pretrained(model_name)
    model = PegasusForConditionalGeneration.from_pretrained(model_name).to(device)

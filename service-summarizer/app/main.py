@@ -30,6 +30,10 @@ app = FastAPI()
 class Text(BaseModel):
     text : str
 
+class TextModel(BaseModel):
+    text : str
+    model : str
+
 
 @app.get("/")
 async def root():
@@ -61,16 +65,17 @@ async def summarize_text(input_text: Text):
   return '', 204
 
 @app.post("/summarizeTextModel/")
-async def summarize_text_model(input_text: Text):
+async def summarize_text_model(input_text: TextModel):
   text_dict = input_text.dict()
-  if text_dict:  # not null
+  if text_dict and 'text' in text_dict and 'model' in text_dict:  # not null
      text_to_summarize = text_dict['text']
      model_name = text_dict['model']
-     summarized_text = hf_pegasus.summarize(text_to_summarize, model_name)
+     summarized_text = hf_pegasus.summarize_model(text_to_summarize, model_name)
      doc = {
        'summary': summarized_text
      }
      return JSONResponse(content=jsonable_encoder(doc))
+  return '', 204
 
 @app.post("/summarizeTextLegal/")
 async def summarize_text_legal(input_text: Text):

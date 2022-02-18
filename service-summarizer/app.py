@@ -60,7 +60,7 @@ def summarize_text_pg():
   return '', 204
 
 @app.route('/summarizeTextModel', methods=['POST'])
-def summarize_text_pg():
+def summarize_text_model():
   if not request.json or not 'text' in request.json:
       abort(400)
   this_document = request.get_json()
