@@ -59,6 +59,22 @@ def summarize_text_pg():
      return jsonify(doc)
   return '', 204
 
+@app.route('/summarizeTextModel', methods=['POST'])
+def summarize_text_pg():
+  if not request.json or not 'text' in request.json:
+      abort(400)
+  this_document = request.get_json()
+  if this_document:  # not null
+     text_to_summarize = this_document['text'] 
+     model_name = this_document['text'] 
+     print(text_to_summarize)
+     summarized_text = hf_pegasus.summarize_model(text_to_summarize, model_name)
+     doc = {
+       'summary': summarized_text
+     }
+     return jsonify(doc)
+  return '', 204
+
 @app.route('/summarizeTextLegal', methods=['POST'])
 def summarize_text_legal():
   if not request.json or not 'text' in request.json:

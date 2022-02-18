@@ -60,6 +60,18 @@ async def summarize_text(input_text: Text):
      return JSONResponse(content=jsonable_encoder(doc))
   return '', 204
 
+@app.post("/summarizeTextModel/")
+async def summarize_text_model(input_text: Text):
+  text_dict = input_text.dict()
+  if text_dict:  # not null
+     text_to_summarize = text_dict['text']
+     model_name = text_dict['model']
+     summarized_text = hf_pegasus.summarize(text_to_summarize, model_name)
+     doc = {
+       'summary': summarized_text
+     }
+     return JSONResponse(content=jsonable_encoder(doc))
+
 @app.post("/summarizeTextLegal/")
 async def summarize_text_legal(input_text: Text):
   text_dict = input_text.dict()

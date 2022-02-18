@@ -14,6 +14,15 @@ def summarize(src_text):
    tgt_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
    return(tgt_text)
 
+def summarize_model(src_text, model_name):
+   device = 'cuda' if torch.cuda.is_available() else 'cpu'
+   tokenizer = PegasusTokenizer.from_pretrained(model_name)
+   model = PegasusForConditionalGeneration.from_pretrained(model_name).to(device)
+   batch = tokenizer(src_text, truncation=True, padding="longest", return_tensors="pt").to(device)
+   translated = model.generate(**batch)
+   tgt_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
+   return(tgt_text)
+
 def summarize_legal(src_text):
    tokenizer = AutoTokenizer.from_pretrained("nsi319/legal-pegasus")
    model = AutoModelForSeq2SeqLM.from_pretrained("nsi319/legal-pegasus")
