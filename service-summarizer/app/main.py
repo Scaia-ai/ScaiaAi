@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
+from fastapi import File, UploadFile
 
 
 
@@ -90,4 +91,13 @@ async def summarize_text_legal(input_text: Text):
   return '', 204
 
 
+
+
+@app.post("/docSimilarity/documentsUpload")
+async def create_upload_file_zip(file: UploadFile):
+    return {"filename": file.filename}
+
+@app.post("/docSimilarity/metadataUpload")
+async def create_upload_file_csv(file: UploadFile):
+    return {"filename": file.filename}
 

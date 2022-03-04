@@ -91,5 +91,17 @@ def summarize_text_legal():
   return '', 204
 
 
+
+
+@app.post("/docSimilarity/documentsUpload")
+async def create_upload_file_zip(file: UploadFile):
+    return {"filename": file.filename}
+
+@app.post("/docSimilarity/metadataUpload")
+async def create_upload_file_csv(file: UploadFile):
+    return {"filename": file.filename}
+
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
