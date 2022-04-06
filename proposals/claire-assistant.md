@@ -33,12 +33,6 @@ be helpful as to the current approach.
 We estimate that from the start of the POC that the deliverables above will be ready in
 7 business days or fewer.
 
-# About Scaia.ai
-
-Scaia.ai is an AI focused company focused on scalable AI approaches to a diverse
-set of problems. Our AI Advisor API focuses on state-of-the-art approaches to
-NLP, NLU, text mining and other related problems.
-
 ## Fees and Terms of Payment
 
 Pricing: $4000.00
@@ -60,8 +54,15 @@ If sending any correspondence via mail, please send it to:
 
 This proposal shall expire at 5 pm your local time from 30 days of proposal time, unless a Statement of Work or comparable paperwork is executed by both parties by this time.
 
-### Appendix A
+# Appendix A
 
-About Scaia.ai
+## About Scaia.ai
 
-Scaia.ai was founded in 2022, to provide scalable AI spolutiohns  .  Its founders Mark Kerzner and Tim Fox are expert AI/ML practitioners.  Both founders are well-known in Big Data ecosystem; they are  published authors and frequent speakers at conferences.
+Scaia.ai was founded in 2022, to provide scalable AI spolutiohns.  
+
+Scaia.ai is an AI focused company focused on scalable AI approaches to a diverse
+set of problems. Our AI Advisor API focuses on state-of-the-art approaches to
+NLP, NLU, text mining and other related problems.
+
+Its founders Mark Kerzner and Tim Fox are expert AI/ML practitioners.  Both founders are well-known in Big Data ecosystem; they are  published authors and frequent speakers at conferences.
+
