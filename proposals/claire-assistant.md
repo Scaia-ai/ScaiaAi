@@ -64,4 +64,4 @@ This proposal shall expire at 5 pm your local time from 30 days of proposal time
 
 About Scaia.ai
 
-Scaia.ai was founded in 2022, to provide Big Data training and consulting.  Its founders Mark Kerzner and Tim Fox are expert AI/ML practitioners.  Both founders are well-known in Big Data ecosystem; they are  published authors and frequent speakers at conferences.
+Scaia.ai was founded in 2022, to provide scalable AI spolutiohns  .  Its founders Mark Kerzner and Tim Fox are expert AI/ML practitioners.  Both founders are well-known in Big Data ecosystem; they are  published authors and frequent speakers at conferences.
