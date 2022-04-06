@@ -16,4 +16,4 @@ fi
 unset __conda_setup
 
 conda activate scaia
-python app.py
+uvicorn main:app --reload --host 0.0.0.0
