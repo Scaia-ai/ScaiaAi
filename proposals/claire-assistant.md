@@ -53,11 +53,8 @@ Preferred payment is via ACH.  Information for paying by wire (ACH/EFT) is avail
 
 If sending any correspondence via mail, please send it to:
 	Scaia.ai
-	One Riverway, Suite 1700
-	Houston, TX 77056
-
-Overdue moneys accumulate interest at the rate of 1% per month, with collections action taken on amounts more than 30 days overdue.
-
+	7522 Apache Plume
+	Houston, TX 77071
 
 ### Expiration
 
